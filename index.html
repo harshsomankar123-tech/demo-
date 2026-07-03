@@ -2,37 +2,557 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Spotify India - DPDP Onboarding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify India — DPDP 2023 Compliance Case Study & Clickable Prototype</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <div class="brand-section">
-        <div class="brand-logo">🟢</div>
+        <div class="brand-logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: var(--spotify-green);">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 13c1.5-.7 3.5-.7 5 0M7 10.5c2.2-1.2 4.8-1.2 7 0M6 8c2.8-1.5 6.2-1.5 9 0" stroke="#000" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
         <div class="brand-info">
           <h2>Spotify India</h2>
           <span>DPDP Compliance</span>
         </div>
       </div>
-      <nav>
+      
+      <nav style="display: flex; flex-direction: column; gap: 20px; flex-grow: 1;">
         <ul class="nav-menu">
-          <li><a href="#" class="nav-item active" data-target="deck-view">1. Case Study Deck</a></li>
-          <li><a href="#" class="nav-item" data-target="prototype-view">2. Interactive Prototype</a></li>
-          <li><a href="#" class="nav-item" data-target="dashboard-view">3. Telemetry Dashboard</a></li>
+          <li>
+            <a href="#" class="nav-item active" data-target="deck-view">
+              <span class="nav-icon" style="display: flex; align-items: center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </span>
+              <span>1. Case Study Deck</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item" data-target="prototype-view">
+              <span class="nav-icon" style="display: flex; align-items: center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </span>
+              <span>2. Interactive Prototype</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item" data-target="dashboard-view">
+              <span class="nav-icon" style="display: flex; align-items: center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </span>
+              <span>3. Telemetry Dashboard</span>
+            </a>
+          </li>
         </ul>
       </nav>
+      
+      <div class="sidebar-footer">
+        <p>Hiring Assignment</p>
+        <p><strong>Vedantu PM Intern</strong></p>
+      </div>
     </aside>
+
+    <!-- Main Content Panel -->
     <main class="main-content">
+      
+      <!-- VIEW 1: Case Study Presentation Deck -->
       <section id="deck-view" class="content-view active">
-        <h2 id="slide-title">Slide Title</h2>
-        <h4 id="slide-subtitle">Slide Subtitle</h4>
-        <div id="slide-body-content"></div>
+        <div class="section-header">
+          <h1>Product Thinking Presentation</h1>
+          <p>India Digital Personal Data Protection (DPDP) Act 2023 Strategy for Spotify India</p>
+        </div>
+        
+        <div class="slide-presentation-container">
+          <div id="slide-viewer" class="slide-viewer">
+            <div class="slide-header">
+              <h2 id="slide-title">Slide Title</h2>
+              <h4 id="slide-subtitle">Slide Subtitle</h4>
+            </div>
+            <div id="slide-body-content" class="slide-body">
+              <!-- Rendered Dynamically via JS -->
+            </div>
+          </div>
+          
+          <div class="slide-footer">
+            <div class="slide-dots" id="slide-dots">
+              <!-- Dots Rendered Dynamically -->
+            </div>
+            <div class="slide-controls" style="display: flex; gap: 8px; align-items: center;">
+              <button class="btn" id="btn-pdf-export">📄 Save Deck as PDF</button>
+              <button class="btn" id="btn-prev">&larr; Previous</button>
+              <button class="btn btn-primary" id="btn-next">Next &rarr;</button>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id="prototype-view" class="content-view"><h2>Prototype Loading...</h2></section>
-      <section id="dashboard-view" class="content-view"><h2>Dashboard Loading...</h2></section>
+
+      <!-- VIEW 2: Interactive Clickable Prototype -->
+      <section id="prototype-view" class="content-view">
+        <div class="section-header">
+          <h1>Interactive Consent & VPC Prototype</h1>
+          <p>Test the end-to-end DPDP happy path onboarding flows and privacy rights controls</p>
+        </div>
+        
+        <div class="prototype-split">
+          
+          <!-- Prototype Guide and Scenario Trigger -->
+          <div class="proto-guide">
+            <div class="guide-card">
+              <h3>Simulation Scenarios</h3>
+              <p>Select a cohort scenario below to test the personalized vs. compliant customer journeys inside the Spotify app:</p>
+              
+              <div class="flow-selector-group">
+                <button class="flow-btn active" data-flow="adult">
+                  <div>
+                    <strong>Scenario A: Adult User (18+)</strong>
+                    <p style="font-size: 11px; margin-top: 2px;">Shows granular multilingual consent selection</p>
+                  </div>
+                  <span class="flow-indicator"></span>
+                </button>
+                
+                <button class="flow-btn" data-flow="teen">
+                  <div>
+                    <strong>Scenario B: Teen User (under 18)</strong>
+                    <p style="font-size: 11px; margin-top: 2px;">Triggers ₹1 UPI Verifiable Parental Consent & Context Mode</p>
+                  </div>
+                  <span class="flow-indicator"></span>
+                </button>
+
+                <button class="flow-btn" data-flow="privacy">
+                  <div>
+                    <strong>Scenario C: Privacy Settings Center</strong>
+                    <p style="font-size: 11px; margin-top: 2px;">Exercise Right to Erasure, Portability, and revoke consents</p>
+                  </div>
+                  <span class="flow-indicator"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="guide-card">
+              <h3>What is being tested?</h3>
+              <ul>
+                <li><strong>Granular Toggles:</strong> Users customize cookies/profiling separately from core streaming agreement.</li>
+                <li><strong>UPI VPC:</strong> Seamless parental verification that uses banking credentials (18+ identity) with zero data leak.</li>
+                <li><strong>Contextual Mode:</strong> Swaps recommendations from behavioral history tracking to contextual mood parameters (complying with Section 9 child protections).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Smartphone Shell Mockup -->
+          <div class="phone-viewport-container">
+            <div class="smartphone-mockup">
+              <!-- Mock Status Bar -->
+              <div class="phone-status-bar">
+                <span class="phone-time">09:41</span>
+                <div class="phone-status-icons">
+                  <span style="font-size: 8px;">📶</span>
+                  <span style="font-size: 8px;">📶</span>
+                  <span style="font-size: 10px;">🔋</span>
+                </div>
+              </div>
+              <div class="screen-content">
+                
+                <!-- SCREEN 1: Age Gate (Signup Entry) -->
+                <div id="screen-age-gate" class="screen-view active">
+                  <div class="spotify-logo-center">🟢</div>
+                  <h3 class="screen-title">Welcome to Spotify</h3>
+                  <div class="screen-form">
+                    <div>
+                      <label class="form-label">Enter your age to continue</label>
+                      <input type="number" id="input-age" class="form-input" placeholder="e.g. 24" value="24">
+                    </div>
+                    <button class="btn btn-primary btn-block" id="age-submit">Verify Age</button>
+                  </div>
+                  <p class="screen-link">Why do we ask for this? (India DPDP Act compliance)</p>
+                </div>
+
+                <!-- SCREEN 2: Adult Consent Screen (Bilingual) -->
+                <div id="screen-adult-consent" class="screen-view">
+                  <div class="lang-selector">
+                    <span class="lang-pill active" data-lang="en">EN</span>
+                    <span class="lang-pill" data-lang="hi">हिन्दी</span>
+                  </div>
+                  <h4 class="screen-title" id="notice-title" style="margin-bottom: 12px; text-align: left; font-size: 16px;">Data Protection & Consent Notice</h4>
+                  
+                  <div class="consent-notice-box" id="notice-body">
+                    In accordance with the India DPDP Act 2023, we require your explicit consent to process your personal data. Below, you can customize how Spotify manages your listening history, device details, and sharing behavior. You may change or revoke these settings at any time in your Privacy Settings.
+                  </div>
+
+                  <div class="consent-toggle-list">
+                    <!-- Core Mandatory Consent -->
+                    <div class="consent-toggle-item">
+                      <div class="toggle-details">
+                        <h5 id="txt-mandatory-title">1. Core Audio Streaming (Essential)</h5>
+                        <p id="txt-mandatory-desc">Required to register your account, manage subscriptions, stream music, and cache files locally.</p>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+
+                    <!-- Profiling/Recommendations -->
+                    <div class="consent-toggle-item">
+                      <div class="toggle-details">
+                        <h5 id="txt-recs-title">2. Listening History & Personalization</h5>
+                        <p id="txt-recs-desc">Enable tracking of your play/skip history, search queries, and artist preferences.</p>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="toggle-personalize" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+
+                    <!-- Ads Targeting -->
+                    <div class="consent-toggle-item">
+                      <div class="toggle-details">
+                        <h5 id="txt-ads-title">3. Personalized Advertising</h5>
+                        <p id="txt-ads-desc">Allows Spotify and advertising partners to profile your interests to deliver targeted audio ads.</p>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="toggle-ads" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+
+                    <!-- Sharing -->
+                    <div class="consent-toggle-item">
+                      <div class="toggle-details">
+                        <h5 id="txt-sharing-title">4. Third-Party Data Sharing</h5>
+                        <p id="txt-sharing-desc">Enable sharing profile indicators with partners.</p>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" id="toggle-sharing" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <button class="btn btn-primary btn-block" id="btn-consent-agree-all" style="font-size: 12px; padding: 10px;">Agree & Proceed</button>
+                    <button class="btn btn-block" id="btn-consent-custom" style="font-size: 11px; padding: 8px;">Confirm Selected Choices</button>
+                  </div>
+                </div>
+
+                <!-- SCREEN 3: Minor Onboarding - Enter Parent Mobile/Email -->
+                <div id="screen-minor-parent-details" class="screen-view">
+                  <div class="spotify-logo-center">🟢</div>
+                  <h3 class="screen-title">Parental Approval Required</h3>
+                  <p style="font-size: 11.5px; color: var(--text-muted); text-align: center; margin-bottom: 20px;">
+                    Under Indian privacy laws, users under 18 require Verifiable Parental Consent. Enter your parent or legal guardian's details below to request approval.
+                  </p>
+                  
+                  <div class="screen-form">
+                    <div>
+                      <label class="form-label">Parent's Mobile Number</label>
+                      <input type="tel" id="input-parent-mobile" class="form-input" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div>
+                      <label class="form-label">Parent's Email Address</label>
+                      <input type="email" id="input-parent-email" class="form-input" placeholder="parent@email.com">
+                    </div>
+                    <button class="btn btn-primary btn-block" id="parent-details-submit">Send Approval Request</button>
+                  </div>
+                  
+                  <div style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+                    <p style="font-size: 10px; color: var(--text-muted); text-align: center; margin-bottom: 8px;">Need quick access? Use a temporary session:</p>
+                    <button class="btn btn-block" id="btn-guest-pass" style="font-size: 10px; padding: 8px; color: var(--color-warning);">Start 48-Hour Guest Pass</button>
+                  </div>
+                </div>
+
+                <!-- SCREEN 4: Parent Verification Simulator (VPC via ₹1 UPI) -->
+                <div id="screen-parent-vpc" class="screen-view">
+                  <h4 class="screen-title" style="font-size: 16px; margin-bottom: 8px;">Parent Portal</h4>
+                  <p style="font-size: 10px; color: var(--text-muted); text-align: center; margin-bottom: 16px;">
+                    Verify you are an adult to consent to your child's Spotify registration.
+                  </p>
+
+                  <div class="payment-summary">
+                    <span style="font-size: 10px; text-transform: uppercase; color: var(--text-muted);">Refundable Verification Fee</span>
+                    <div class="payment-amount">₹1.00</div>
+                    <p style="font-size: 9px; color: var(--spotify-green); margin-top: 4px;">Will be auto-refunded to your account instantly.</p>
+                  </div>
+
+                  <p class="form-label" style="margin-bottom: 8px;">Choose instant payment to verify:</p>
+                  <div class="upi-list">
+                    <div class="upi-option" data-app="gpay">
+                      <div class="upi-logo">G</div>
+                      <span>Pay via Google Pay</span>
+                    </div>
+                    <div class="upi-option" data-app="phonepe">
+                      <div class="upi-logo">P</div>
+                      <span>Pay via PhonePe</span>
+                    </div>
+                    <div class="upi-option" data-app="paytm">
+                      <div class="upi-logo">T</div>
+                      <span>Pay via Paytm UPI</span>
+                    </div>
+                  </div>
+
+                  <div style="border-top: 1px solid var(--border-color); padding-top: 12px; text-align: center;">
+                    <span style="font-size: 10px; color: var(--text-muted); display: block; margin-bottom: 8px;">Other methods:</span>
+                    <button class="btn" id="digilocker-vpc-trigger" style="font-size: 10px; padding: 6px 12px; border-radius: 4px;">📂 Verify via DigiLocker Account</button>
+                  </div>
+                </div>
+
+                <!-- SCREEN 5: Spotify Home Shell Dashboard -->
+                <div id="screen-spotify-home" class="screen-view" style="padding: 0; background-color: #070707;">
+                  <div class="spotify-app-shell" style="padding: 16px;">
+                    <div class="spotify-header">
+                      <h3>Spotify</h3>
+                      <div class="header-actions" style="display: flex; align-items: center; gap: 14px;">
+                        <span id="spotify-bell" style="display: flex; align-items: center; color: var(--text-muted);">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        </span>
+                        <span id="spotify-settings-gear" onclick="document.getElementById('nav-tab-settings').click();" style="display: flex; align-items: center; color: var(--text-muted); cursor: pointer;">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div class="spotify-body" id="spotify-home-feed">
+                      <!-- Rendered Dynamically in app.js based on personalization/minor status -->
+                    </div>
+                    
+                    <div class="spotify-nav-bar">
+                      <div class="nav-tab active" id="nav-tab-home" style="display: flex; flex-direction: column; align-items: center;">
+                        <span class="nav-tab-icon" style="display: flex; align-items: center; margin-bottom: 2px;">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </span>
+                        <span>Home</span>
+                      </div>
+                      <div class="nav-tab" id="nav-tab-settings" style="display: flex; flex-direction: column; align-items: center;">
+                        <span class="nav-tab-icon" style="display: flex; align-items: center; margin-bottom: 2px;">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        </span>
+                        <span>Settings</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN 6: Spotify App Settings Shell -->
+                <div id="screen-spotify-settings" class="screen-view" style="padding: 0; background-color: #070707;">
+                  <div class="spotify-app-shell" style="padding: 16px;">
+                    <div class="spotify-header">
+                      <h3 id="btn-back-settings" style="cursor: pointer;">&larr; Settings</h3>
+                    </div>
+                    
+                    <div class="spotify-body">
+                      <div class="settings-list">
+                        <div class="settings-item" id="settings-privacy-center" style="background-color: rgba(29, 185, 84, 0.1); border: 1px solid var(--spotify-green);">
+                          <div class="settings-info">
+                            <h5 style="color: var(--spotify-green);">🛡️ DPDP Privacy Center</h5>
+                            <p style="color: var(--text-muted);">Manage consents, export data, and request erasure.</p>
+                          </div>
+                          <span class="arrow-right">&rarr;</span>
+                        </div>
+                        
+                        <div class="settings-item">
+                          <div class="settings-info">
+                            <h5>Account Details</h5>
+                            <p>Edit username, phone number, email.</p>
+                          </div>
+                          <span class="arrow-right">&rarr;</span>
+                        </div>
+
+                        <div class="settings-item">
+                          <div class="settings-info">
+                            <h5>Audio Quality</h5>
+                            <p>Configure streaming and download speeds.</p>
+                          </div>
+                          <span class="arrow-right">&rarr;</span>
+                        </div>
+
+                        <div class="settings-item">
+                          <div class="settings-info">
+                            <h5>Storage</h5>
+                            <p>Clear cache, manage locally saved songs.</p>
+                          </div>
+                          <span class="arrow-right">&rarr;</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="spotify-nav-bar">
+                      <div class="nav-tab" onclick="document.getElementById('nav-tab-home').click();" style="display: flex; flex-direction: column; align-items: center;">
+                        <span class="nav-tab-icon" style="display: flex; align-items: center; margin-bottom: 2px;">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </span>
+                        <span>Home</span>
+                      </div>
+                      <div class="nav-tab active" style="display: flex; flex-direction: column; align-items: center;">
+                        <span class="nav-tab-icon" style="display: flex; align-items: center; margin-bottom: 2px;">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        </span>
+                        <span>Settings</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN 7: Detailed DPDP Privacy Center Details -->
+                <div id="screen-privacy-center-details" class="screen-view" style="padding: 0; background-color: #070707;">
+                  <div class="spotify-app-shell" style="padding: 16px;">
+                    <div class="spotify-header">
+                      <h3 id="btn-back-privacy" style="cursor: pointer;">&larr; Privacy Center</h3>
+                    </div>
+                    
+                    <div class="spotify-body" style="padding-bottom: 20px;">
+                      <p style="font-size: 9.5px; color: var(--text-muted); margin-bottom: 12px;">
+                        Manage your data rights in compliance with the Digital Personal Data Protection Act (DPDPA), 2023.
+                      </p>
+
+                      <div id="minor-settings-notice" class="privacy-banner-alert" style="background-color: rgba(245, 158, 11, 0.1); border-color: var(--color-warning); margin-bottom: 12px; display: none;">
+                        <span>⚠️ Minor Profile detected: Tracking is locked off to comply with Section 9.</span>
+                      </div>
+
+                      <div class="consent-toggle-list" style="margin-bottom: 16px; gap: 8px;">
+                        <!-- Toggle Personalization -->
+                        <div class="consent-toggle-item" style="padding: 8px;">
+                          <div class="toggle-details">
+                            <h5 style="font-size: 11px;">Listening History Profiling</h5>
+                            <p style="font-size: 8.5px;">Allows personalized recommendation algorithms.</p>
+                          </div>
+                          <label class="switch">
+                            <input type="checkbox" id="settings-toggle-personalize">
+                            <span class="slider"></span>
+                          </label>
+                        </div>
+
+                        <!-- Toggle Ads -->
+                        <div class="consent-toggle-item" style="padding: 8px;">
+                          <div class="toggle-details">
+                            <h5 style="font-size: 11px;">Personalized targeted Ads</h5>
+                            <p style="font-size: 8.5px;">Enables ad indexing based on interest tracking.</p>
+                          </div>
+                          <label class="switch">
+                            <input type="checkbox" id="settings-toggle-ads">
+                            <span class="slider"></span>
+                          </label>
+                        </div>
+
+                        <!-- Toggle Sharing -->
+                        <div class="consent-toggle-item" style="padding: 8px;">
+                          <div class="toggle-details">
+                            <h5 style="font-size: 11px;">Third-Party Partner Sync</h5>
+                            <p style="font-size: 8.5px;">Permits syncing indicators with speakers/external apps.</p>
+                          </div>
+                          <label class="switch">
+                            <input type="checkbox" id="settings-toggle-sharing">
+                            <span class="slider"></span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                        <h6 class="form-label" style="margin-bottom: 4px;">Exercise Data Rights:</h6>
+                        <button class="btn btn-block" id="btn-data-export" style="font-size: 11px; padding: 8px; justify-content: flex-start; text-align: left;">📥 Download My Listening Profile (Portability)</button>
+                        <button class="btn btn-block" id="btn-data-erasure" style="font-size: 11px; padding: 8px; justify-content: flex-start; text-align: left; color: var(--color-danger); border-color: rgba(239, 68, 68, 0.2);">🗑️ Erase Account & All History (Erasure)</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VIEW 3: Telemetry Compliance Dashboard -->
+      <section id="dashboard-view" class="content-view">
+        <div class="section-header">
+          <h1>DPDP Telemetry Monitor</h1>
+          <p>Real-time telemetry measuring product compliance, parental conversion rates, and onboarding health</p>
+        </div>
+        
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-card-title">North Star: Consent Health Rate</div>
+            <div class="dashboard-card-value" id="dash-kpi-chr">86.4%</div>
+            <div class="dashboard-card-change up">▲ 0.8% vs last week (Target: 88%)</div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-title">VPC Completion Rate</div>
+            <div class="dashboard-card-value" id="dash-kpi-vpc">81.2%</div>
+            <div class="dashboard-card-change down">▼ 1.4% vs last week (Target: 85%)</div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-title">Active Indian Users (MAU)</div>
+            <div class="dashboard-card-value" id="dash-kpi-users">55.0M</div>
+            <div class="dashboard-card-change up">▲ 2.1% MoM growth</div>
+          </div>
+        </div>
+
+        <div class="dashboard-charts-container">
+          
+          <!-- Line Chart for Trends -->
+          <div class="chart-panel">
+            <div class="chart-panel-title">Consent Health Rate (CHR) Trend (W1 - W6)</div>
+            <div class="chart-wrapper" id="trend-chart-wrapper">
+              <!-- Rendered Dynamically in app.js -->
+            </div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div class="legend-color" style="background-color: var(--spotify-green);"></div>
+                <span>Actual CHR</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background-color: var(--color-danger);"></div>
+                <span>Week 3 Telemetry Anomaly</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doughnut/Bar for Cohort segmentation -->
+          <div class="chart-panel">
+            <div class="chart-panel-title">Active User Consent Distribution</div>
+            <div class="chart-wrapper" id="seg-chart-wrapper" style="align-items: flex-start; justify-content: flex-start; padding-top: 10px;">
+              <!-- Rendered Dynamically in app.js -->
+            </div>
+            <p style="font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-top: 16px;">
+              *Note: Explicit opt-out indicates adult users who opted out of recommendation profiling. Teen accounts are automatically isolated into protected context groups.
+            </p>
+          </div>
+
+        </div>
+        
+        <!-- Live Audit Logs -->
+        <div class="chart-panel" style="margin-top: 20px;">
+          <div class="chart-panel-title">Real-Time DPDPA Compliance Audit Logs</div>
+          <div class="log-container" id="dash-log-container">
+            <div class="log-entry"><span class="log-time">[08:41:23]</span> <span class="log-tag tag-success">SYSTEM</span> Telemetry initialized. Compliance Health Rate at 86.4%.</div>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <!-- Custom Notification Toast -->
+    <div id="toast" class="toast-notification">Notification Message</div>
+
   </div>
+
+  <!-- Load presentation slides data and application scripts -->
   <script src="deck_data.js"></script>
   <script src="app.js"></script>
 </body>
