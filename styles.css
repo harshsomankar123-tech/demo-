@@ -1,0 +1,20 @@
+:root {
+  --bg-primary: #09090b;
+  --bg-secondary: #121214;
+  --spotify-green: #1db954;
+  --text-main: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  margin: 0;
+  display: flex;
+}
+.app-container { display: flex; width: 100vw; height: 100vh; }
+.sidebar { width: 260px; background-color: var(--bg-secondary); padding: 20px; }
+.main-content { flex-grow: 1; padding: 30px; }
+.content-view { display: none; }
+.content-view.active { display: block; }
