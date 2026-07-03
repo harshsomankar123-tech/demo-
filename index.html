@@ -13,10 +13,10 @@
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <div class="brand-section">
-        <div class="brand-logo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: var(--spotify-green);">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M8 13c1.5-.7 3.5-.7 5 0M7 10.5c2.2-1.2 4.8-1.2 7 0M6 8c2.8-1.5 6.2-1.5 9 0" stroke="#000" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        <div class="brand-logo" style="display: flex; align-items: center;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="var(--spotify-green)"/>
+            <path d="M16.586 16.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.67-.137-.747-.472-.075-.336.136-.67.472-.747 3.854-.88 7.15-.506 9.822 1.13.295.18.387.563.206.862zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.077-1.182-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.668-1.112 8.236-.57 11.343 1.343.366.226.486.707.26 1.072zm.105-2.836C14.692 8.8 9.39 8.62 6.31 9.555c-.482.146-.983-.127-1.13-.61-.146-.483.127-.984.61-1.13 3.542-1.077 9.387-.87 13.1 1.333.435.258.578.82.32 1.255-.258.435-.82.578-1.255.32z" fill="#000"/>
           </svg>
         </div>
         <div class="brand-info">
@@ -171,7 +171,12 @@
                 
                 <!-- SCREEN 1: Age Gate (Signup Entry) -->
                 <div id="screen-age-gate" class="screen-view active">
-                  <div class="spotify-logo-center">🟢</div>
+                  <div class="spotify-logo-center" style="display: flex; justify-content: center; margin-top: 40px; margin-bottom: 24px;">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" fill="var(--spotify-green)"/>
+                      <path d="M16.586 16.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.67-.137-.747-.472-.075-.336.136-.67.472-.747 3.854-.88 7.15-.506 9.822 1.13.295.18.387.563.206.862zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.077-1.182-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.668-1.112 8.236-.57 11.343 1.343.366.226.486.707.26 1.072zm.105-2.836C14.692 8.8 9.39 8.62 6.31 9.555c-.482.146-.983-.127-1.13-.61-.146-.483.127-.984.61-1.13 3.542-1.077 9.387-.87 13.1 1.333.435.258.578.82.32 1.255-.258.435-.82.578-1.255.32z" fill="#000"/>
+                    </svg>
+                  </div>
                   <h3 class="screen-title">Welcome to Spotify</h3>
                   <div class="screen-form">
                     <div>
@@ -253,7 +258,12 @@
 
                 <!-- SCREEN 3: Minor Onboarding - Enter Parent Mobile/Email -->
                 <div id="screen-minor-parent-details" class="screen-view">
-                  <div class="spotify-logo-center">🟢</div>
+                  <div class="spotify-logo-center" style="display: flex; justify-content: center; margin-top: 40px; margin-bottom: 24px;">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" fill="var(--spotify-green)"/>
+                      <path d="M16.586 16.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.67-.137-.747-.472-.075-.336.136-.67.472-.747 3.854-.88 7.15-.506 9.822 1.13.295.18.387.563.206.862zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.077-1.182-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.668-1.112 8.236-.57 11.343 1.343.366.226.486.707.26 1.072zm.105-2.836C14.692 8.8 9.39 8.62 6.31 9.555c-.482.146-.983-.127-1.13-.61-.146-.483.127-.984.61-1.13 3.542-1.077 9.387-.87 13.1 1.333.435.258.578.82.32 1.255-.258.435-.82.578-1.255.32z" fill="#000"/>
+                    </svg>
+                  </div>
                   <h3 class="screen-title">Parental Approval Required</h3>
                   <p style="font-size: 11.5px; color: var(--text-muted); text-align: center; margin-bottom: 20px;">
                     Under Indian privacy laws, users under 18 require Verifiable Parental Consent. Enter your parent or legal guardian's details below to request approval.
