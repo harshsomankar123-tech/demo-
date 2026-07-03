@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify India - DPDP Onboarding</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="brand-section">
+        <div class="brand-logo">🟢</div>
+        <div class="brand-info">
+          <h2>Spotify India</h2>
+          <span>DPDP Compliance</span>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-item active" data-target="deck-view">1. Case Study Deck</a></li>
+          <li><a href="#" class="nav-item" data-target="prototype-view">2. Interactive Prototype</a></li>
+          <li><a href="#" class="nav-item" data-target="dashboard-view">3. Telemetry Dashboard</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <section id="deck-view" class="content-view active">
+        <h2 id="slide-title">Slide Title</h2>
+        <h4 id="slide-subtitle">Slide Subtitle</h4>
+        <div id="slide-body-content"></div>
+      </section>
+      <section id="prototype-view" class="content-view"><h2>Prototype Loading...</h2></section>
+      <section id="dashboard-view" class="content-view"><h2>Dashboard Loading...</h2></section>
+    </main>
+  </div>
+  <script src="deck_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
